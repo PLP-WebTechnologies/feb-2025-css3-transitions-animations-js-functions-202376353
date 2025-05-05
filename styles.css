@@ -1,0 +1,110 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  color: #333;
+}
+
+
+.box {
+  width: 120px;
+  height: 120px;
+  background-color: #3498db;
+  transition: background-color 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for buttons */
+button {
+  margin: 10px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.animated-button {
+  animation: buttonPulse 2s infinite;
+}
+
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+    background-color: #6a11cb;
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: #2575fc;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #6a11cb;
+  }
+}
+
+/* Styling for the image */
+.animated-image {
+  width: 220px;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: imageBounce 3s infinite;
+}
+
+@keyframes imageBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+
+@keyframes boxShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+.animate-box {
+  animation: boxShake 1s ease;
+}
